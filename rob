@@ -1,34 +1,16 @@
-# encoding: utf-8
+#encoding: UTF-8
+array = ["Ruby", "Python", "Perl", "C#", "Assembly"]
+gereksinim = 0
 
-class Program
-	attr_accessor :diziler, :gerekli
-	def dizicik(diziler, gerekli)
-       @diziler = ["Ruby", "Python", "Perl", "C#", "PHP"]
-       @gerekli = 0
-   end
+array.each do |value|
+  puts "#{value} Dilini biliyor musun? E/H "
+  if gets.chomp.upcase == "E"
+    gereksinim = gereksinim + 1
+  end
 end
 
-class Dongu < Program
-	
-	def testo
-    	@diziler.each do |value|
-	print "#{value} dilini biliyor musun E/H "
-	if gets.chomp.upcase == "E"
-		gerekli = gerekli + 1
-	 end
-	end
+if gereksinim >2
+  puts "başarılı"
+else
+  puts "başarısız"
 end
- 
- 
-
-     if @gerekli >2
-	puts "Başarıldı"
-    else
-	puts "başarısız"
-      end
-end
-
-
-obj1 = Program.new
-obj2 = Dongu.new
-obj2.testo
