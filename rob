@@ -1,4 +1,4 @@
-
+# encoding: utf-8
 
 class Program
 	attr_accessor :diziler, :gerekli
