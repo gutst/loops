@@ -1,0 +1,34 @@
+
+
+class Program
+	attr_accessor :diziler, :gerekli
+	def dizicik(diziler, gerekli)
+       @diziler = ["Ruby", "Python", "Perl", "C#", "PHP"]
+       @gerekli = 0
+   end
+end
+
+class Dongu < Program
+	
+	def testo
+    	@diziler.each do |value|
+	print "#{value} dilini biliyor musun E/H "
+	if gets.chomp.upcase == "E"
+		gerekli = gerekli + 1
+	 end
+	end
+end
+ 
+ 
+
+     if @gerekli >2
+	puts "Başarıldı"
+    else
+	puts "başarısız"
+      end
+end
+
+
+obj1 = Program.new
+obj2 = Dongu.new
+obj2.testo
